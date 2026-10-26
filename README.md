@@ -1,38 +1,37 @@
-Responsive Portfolio Site
+[README.md](https://github.com/user-attachments/files/33943680/README.md)
+# Responsive Portfolio Website - Midterm
 
-Hey! This is my personal portfolio website for my web dev midterm project. I took my old portfolio from class and upgraded it using CSS Flexbox, CSS Grid, and media queries so it works nicely on desktop, tablet, and phone screens.
+A personal portfolio website built with HTML5 and CSS3 for the Midterm Project. It features a responsive layout utilizing Flexbox and CSS Grid to showcase projects, work experience, and social links.
 
- Project Links
+## Features
 
-GitHub Repository: https://github.com/sergio-aguilar/responsive-portfolio-midterm
+- **Flexbox Navigation:** Responsive header navigation that adapts across screen sizes.
+- **CSS Grid Project Gallery:** Auto-fitting layout showcasing mobile and web development projects.
+- **Responsive Design:** Includes media query breakpoints tailored for desktop, tablet (max-width: 800px), and mobile (max-width: 400px) devices.
+- **Dark Theme Styling:** Modern dark user interface styling with custom gradients.
 
-Live Website: https://sergio-aguilar.github.io/responsive-portfolio-midterm/
+## Project Structure
 
- What I Built and Learned
+```
+├── index.html
+└── assests/
+    ├── logo.png
+    ├── deepfridge.png
+    ├── bayareagold.png
+    ├── kenseijudo.png
+    ├── sentinelssoccer.png
+    ├── x-icon.png
+    ├── discord-icon.png
+    └── github-icon.png
+```
 
-Navbar Header: I used Flexbox (display: flex) to align my logo on the left and navigation links on the right.
+## How to Run
 
-Projects Grid: I used CSS Grid (display: grid) to show off my four main projects (DeepFridge, Bay Area Gold, Kensei Judo, and Sentinels Soccer Club). It uses repeat and minmax so the cards shrink and wrap automatically.
+1. Clone or download this repository.
+2. Ensure the `assests/` folder contains all required image files.
+3. Open `index.html` directly in any standard web browser.
 
-Mobile Responsive Layout: I added media queries for tablet (around 800px) and phone screens (around 400px) so the layout switches to 2 columns on tablets and a single column stack on mobile phones.
+## Author
 
-File Setup
-
-├── index.html        # Main HTML structure
-├── styles.css        # Flexbox, Grid, and Media Query styling
-├── assets/           # Images and icons
-└── README.md         # Project instructions
-
- How to Open and Test Locally
-
-Clone or download this repo to your computer.
-
-Open the folder.
-
-Double click index.html to open it up in Google Chrome, Safari, or whatever browser you use.
-
- Student Info
-
-Sergio Aguilar
-
-CS / Web Development Student
+**Jose Aguilar**  
+[GitHub Repository](https://github.com/jjaguilarf05-sketch/responsive-portfolio-midterm)
