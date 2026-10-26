@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose Aguilar | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0b0f17;
+      color: #f8fafc;
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar Flexbox */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border: 2px solid #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .nav-links a {
+      color: #94a3b8;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin: 48px 0 24px 0;
+      text-transform: uppercase;
+    }
+
+    /* Projects Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+    .project-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .project-desc {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+
+    /* Experience Section */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+    }
+    .experience-item {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .company-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f8fafc;
+      white-space: nowrap;
+    }
+    .role-desc {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+    .social-links img {
+      width: 20px;
+      height: 20px;
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+    }
+    .social-links a:hover img {
+      opacity: 1;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 800px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .experience-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .footer {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="navbar">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="assests/logo.png" alt="JA Logo">
+        </div>
+        <span>JOSE AGUILAR</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="projects">
+        <h2 class="section-title">PROJECTS</h2>
+        <div class="project-grid">
+          
+          <article class="project-card">
+            <div class="project-icon">
+              <img src="assests/deepfridge.png" alt="DeepFridge Icon">
+            </div>
+            <h3 class="project-title">DEEPFRIDGE</h3>
+            <p class="project-desc">Mobile application using AI for food inventory and waste reduction (React Native, Expo, Gemini)</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <img src="assests/bayareagold.png" alt="Bay Area Gold Icon">
+            </div>
+            <h3 class="project-title">BAY AREA GOLD</h3>
+            <p class="project-desc">E-commerce platform for gold trading and custom jewelry (Shopify, algorithmic pricing)</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <img src="assests/kenseijudo.png" alt="Kensei Judo Icon">
+            </div>
+            <h3 class="project-title">KENSEI JUDO</h3>
+            <p class="project-desc">Modern website with Astro, optimized for Kensei Judo School (SEO, performance)</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <img src="assests/sentinelssoccer.png" alt="Sentinels Soccer Icon">
+            </div>
+            <h3 class="project-title">SENTINELS SOCCER CLUB</h3>
+            <p class="project-desc">Web platform for team management, player registration, and club info</p>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title">WORK EXPERIENCE</h2>
+        <div class="experience-list">
+          <div class="experience-item">
+            <span class="company-name">Allied Universal</span>
+            <span class="role-desc">- Security Operations & Event Staff</span>
+          </div>
+          <div class="experience-item">
+            <span class="company-name">Planet Fitness</span>
+            <span class="role-desc">- Member Services & Operations</span>
+          </div>
+          <div class="experience-item">
+            <span class="company-name">Levi's Stadium</span>
+            <span class="role-desc">- Guest Services & Event Operations</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>&copy; 2026 Jose Aguilar</div>
+      <div class="social-links">
+        <a href="#" aria-label="X">
+          <img src="assests/x-icon.png" alt="X Icon">
+        </a>
+        <a href="#" aria-label="Discord">
+          <img src="assests/discord-icon.png" alt="Discord Icon">
+        </a>
+        <a href="https://github.com/jjaguilarf05-sketch/responsive-portfolio-midterm" target="_blank" aria-label="GitHub">
+          <img src="assests/github-icon.png" alt="GitHub Icon">
+        </a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
